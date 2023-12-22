@@ -1,0 +1,25 @@
+.gameBoard
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.gameBoardRow
+{
+    display: flex;
+    flex-direction: row;
+}
+
+.gameBoardHouse
+{
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    cursor: pointer;
+    font-size: 60px;
+    border: 1px solid #000;
+}
+
