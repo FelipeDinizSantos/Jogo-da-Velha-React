@@ -2,6 +2,7 @@ import {useState} from 'react';
 import GameBoard from './components/GameBoard';
 import ButtonResetPlay from './components/ButtonResetPlay';
 import './assets/stylesheets/App.css';
+import Copyright from './components/copyright';
 
 function App() 
 {
@@ -128,7 +129,7 @@ function App()
                     changePlayer();
                     setTimeout(() => {
                         alert('Jogador ' + currentSymbol + ' venceu!');
-                    }, 0);
+                    }, 10);
                     setPlaying(false);
                     return;
                 }
@@ -137,7 +138,7 @@ function App()
                 {
                     setTimeout(() => {
                         alert('Empate!');
-                    }, 0);
+                    }, 10);
                     setPlaying(false);
                 }
             }
@@ -156,9 +157,9 @@ function App()
     }
 
     return(
-        <>
-            <div>
-                <p>Vez de: {currentSymbol}</p>
+        <div className='container'>
+            <div className='turn'>
+                <p>VEZ DE: {currentSymbol}</p>
             </div>
             <div>
                 <GameBoard game={game} play={play} />
@@ -166,7 +167,8 @@ function App()
             <div>
                 <ButtonResetPlay isPlaying={isPlaying} resetGame={resetGame} />
             </div>
-        </>
+            <Copyright />
+        </div>
     );
 }
 

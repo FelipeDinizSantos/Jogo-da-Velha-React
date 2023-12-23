@@ -1,3 +1,24 @@
+body
+{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #474747;
+}
+
+.container
+{
+    margin-top: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+}
+
+.turn
+{
+    color: #fff;
+}
+
 .gameBoard
 {
     display: flex;
@@ -20,6 +41,46 @@
     flex-direction: row;
     cursor: pointer;
     font-size: 60px;
-    border: 1px solid #000;
+    color: #fff;
+    border: 1px solid #fff;
 }
 
+button
+{
+    letter-spacing: .5px;
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+    outline: none;
+    font-size: 16px;
+    padding: 1em;
+    cursor: pointer;
+    transition: all ease-in-out .2s;
+}
+
+button:hover
+{
+    border-color: transparent;
+    background-color: #149ECA;
+}
+
+.copyright
+{
+    color: #fff;
+    font-size: 20px;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 60px;
+    text-align: center;
+}
+
+.copyright a
+{
+    text-decoration: none;
+    color: inherit;
+}
+
+.copyright a:hover
+{
+    text-decoration: underline;
+}
