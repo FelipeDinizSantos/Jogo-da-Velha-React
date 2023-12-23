@@ -10,4 +10,4 @@ Este é um projeto simples de Jogo da Velha desenvolvido com o framework React, 
 2. Navegue até o diretório do projeto: `cd Jogo-da-Velha-React`
 3. Instale as dependências: `npm install`
 4. Execute a aplicação: `npm start`
-Navegue e utilize este repositório da forma que lhe for util!   
+   Navegue e utilize este repositório da forma que lhe for util!
