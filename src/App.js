@@ -105,6 +105,15 @@ function App()
         return false;
     };
 
+    const haveEmptySpaces = () => 
+    {
+        for (let row = 0; row < game.length; row++) 
+        {
+          for (let house = 0; house < game[row].length; house++) if (game[row][house] !== 'X' && game[row][house] !== 'O') return true; 
+        }
+        return false;
+    };
+
     const play = (element)=>
     {
         if(isPlaying)
@@ -121,10 +130,14 @@ function App()
                         alert('Jogador ' + currentSymbol + ' venceu!');
                     }, 0);
                     setPlaying(false);
+                    return;
                 }
-                else if(checkVictory() === 'tie')
+
+                if(!haveEmptySpaces())
                 {
-                    alert('Empate!');
+                    setTimeout(() => {
+                        alert('Empate!');
+                    }, 0);
                     setPlaying(false);
                 }
             }
